@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xenko.Engine" Version="3.1.0.1" />
+    <PackageReference Include="System.Memory" Version="4.5.2" />
+    <PackageReference Include="Xenko.Video" Version="3.1.0.1" />
+    <PackageReference Include="Xenko.Physics" Version="3.1.0.1" />
+    <PackageReference Include="Xenko.Navigation" Version="3.1.0.1" />
+    <PackageReference Include="Xenko.Particles" Version="3.1.0.1" />
+    <PackageReference Include="Xenko.UI" Version="3.1.0.1" />
+
+    <PackageReference Include="Xenko.Core.Assets.CompilerApp" Version="3.1.0.1" IncludeAssets="build;buildTransitive" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Resources\Effects\ComputeColorWave.xksl">
+      <Generator>XenkoShaderKeyGenerator</Generator>
+      <LastGenOutput>ComputeColorWave.cs</LastGenOutput>
+    </None>
+    <Compile Update="Resources\Effects\ComputeColorWave.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ComputeColorWave.xksl</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

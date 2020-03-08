@@ -1,0 +1,38 @@
+!MaterialAsset
+Id: d79a5745-720d-4b27-8eb2-1e2a2772c19e
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Attributes:
+    MicroSurface: !MaterialGlossinessMapFeature
+        GlossinessMap: !ComputeFloat
+            Value: 0.1
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeColor
+            Value: {R: 0.13775, G: 0.13775, B: 0.13775, A: 1.0}
+    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    Specular: !MaterialMetalnessMapFeature
+        MetalnessMap: !ComputeFloat
+            Value: 0.0
+    SpecularModel: !MaterialSpecularMicrofacetModelFeature
+        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
+        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
+        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
+        Environment: !MaterialSpecularMicrofacetEnvironmentGGXLUT {}
+    Emissive: !MaterialEmissiveMapFeature
+        Enabled: false
+        EmissiveMap: !ComputeShaderClassColor
+            MixinReference: ComputeColorWave
+            Generics:
+                1450c27a06a208734271c76bf5bc1742~Frequency: !ComputeColorParameterFloat
+                    Value: 1.0
+                81126ed6701b6604ca637758dc688a0e~Amplitude: !ComputeColorParameterFloat
+                    Value: 0.5
+                cc302d5bf08bc79a767090c8be581ab4~Speed: !ComputeColorParameterFloat
+                    Value: -0.5
+            CompositionNodes: {}
+        Intensity: !ComputeFloat
+            Value: 1.0
+        UseAlpha: true
+    Overrides:
+        UVScale: {X: 1.0, Y: 1.0}
+Layers: {}
