@@ -6,43 +6,109 @@ ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
-        - ref!! 8f963332-fb4d-403d-8aaa-7eceb995e01b
         - ref!! ec1f0482-aad7-4b56-b2c1-f458c788d205
         - ref!! 671757ce-7a6c-49f5-87a4-91c470e33650
-        - ref!! d326b05b-83a6-46e5-af89-3d89cee7457b
         - ref!! 0a8e2a8c-bbcb-4c86-880a-def7a8dc7267
-        - ref!! 3443d2d3-abf4-437f-96f5-ef0209f018b3
+        - ref!! 33f7a7ad-d782-49e2-ae98-6e91893e0097
+        - ref!! 970d8c91-8005-4e1c-88e8-eb9df2dffd33
+        - ref!! 07f8f031-ccc4-4093-9510-d01bd1523a5e
     Parts:
+        -   Entity:
+                Id: 07f8f031-ccc4-4093-9510-d01bd1523a5e
+                Name: trigger
+                Components:
+                    41070fc75d783d4c49eaedb58dfbca89: !TransformComponent
+                        Id: fc053d25-4cff-4171-90cf-9794bf2cf7cb
+                        Position: {X: 0.0, Y: 5.0, Z: -10.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 10.0, Y: 10.0, Z: 10.0}
+                        Children: {}
+                    125d213c202f7125c4060861b2992775: !RigidbodyComponent
+                        Id: 0330a48b-5e7f-4bb0-95fd-e8df2bc108c6
+                        CollisionGroup: SensorTrigger
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            930e01f8e13547e840ed31925c809e40: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 0a8e2a8c-bbcb-4c86-880a-def7a8dc7267
                 Name: Sphere
                 Components:
                     7ff01866f032be76415f113e947e11ca: !TransformComponent
                         Id: 60cc0e8f-ba92-4c0f-acb5-e683dc2f571c
-                        Position: {X: 0.0, Y: 1.27458227, Z: -130.123627}
+                        Position: {X: 0.0, Y: 0.6, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            361b327ebe8850f42dce3335011a0db5: ref!! 82f82fe9-fc16-4533-8d20-bbf60610d334
                     326aa08c2bf60e7b986d2d4c9c9bc5e8: !ModelComponent
                         Id: 39c0422c-8d32-4cb3-b57c-9a121f68bc46
                         Model: 2bec6f67-301f-4eb3-b43c-aec939f1d42a:Sphere
                         IsShadowCaster: false
                         Materials:
                             c150caacc9391bb78959503ade8ad1c4~0: 26228b27-f064-4a2e-a1c1-d56bf7f793f5:boomsource
+                    88de94c289c9c9a4595ec79e570b38d8: !MyGame.MoveBall,MyGame
+                        Id: b58e439e-e419-4be6-ad61-099e30efd90d
+                    af6ef229125a0f5e9e30da6f17203752: !CharacterComponent
+                        Id: 63d58297-ff36-4f2b-86fa-a8cbff2e5e26
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        ColliderShapes:
+                            8bd69bfb9237975cb72e41485c41c1c2: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
         -   Entity:
-                Id: 3443d2d3-abf4-437f-96f5-ef0209f018b3
-                Name: terrain
+                Id: 33f7a7ad-d782-49e2-ae98-6e91893e0097
+                Name: Ground
                 Components:
-                    2878be1757e939352247514220070b6c: !TransformComponent
-                        Id: f91ddc6c-4297-45a5-9598-81f32b15b862
+                    9a6aa0c91d63be269e4ab0d39a640d26: !TransformComponent
+                        Id: aef811cb-ca02-473f-8e2e-6f9522260499
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    23f1588bbf31cb0fb9ac51d9bde5fbcd: !MyGame.Scripts.Terrain,MyGame
-                        Id: 904674c1-a0f3-4055-b1a5-f7f42b576d89
-                        material: d79a5745-720d-4b27-8eb2-1e2a2772c19e:Ground Material
-                        heightMap: eb9015af-85fe-400e-b8e9-0a8891c182f0:Heightmap
+                    8201dd76c7a7af603cd5a9d26cebacae: !ModelComponent
+                        Id: f98925b7-b657-4630-bd1f-4e8079cc748b
+                        Model: d9894d0d-f0b0-4337-9b89-02f45a3e4bb6:Ground
+                        Materials: {}
+                    a516bf3550fc05707e2f79b2f13197d0: !StaticColliderComponent
+                        Id: 34708277-517a-42f1-8057-749b7a509548
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            c05218bf0291b6ea9d5e884d92d32b74: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
         -   Entity:
                 Id: 671757ce-7a6c-49f5-87a4-91c470e33650
                 Name: Skybox
@@ -66,8 +132,8 @@ Hierarchy:
                 Components:
                     e9c149e2b2f3d6ea7b7e41667db81d21: !TransformComponent
                         Id: 82f82fe9-fc16-4533-8d20-bbf60610d334
-                        Position: {X: -1.36418152, Y: 21.34377, Z: -0.08702105}
-                        Rotation: {X: -0.707106769, Y: 0.0, Z: 0.0, W: 0.707106769}
+                        Position: {X: 0.0, Y: 3.26294184, Z: 3.80499125}
+                        Rotation: {X: -0.258819044, Y: 0.0, Z: 0.0, W: 0.9659258}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     c1e09fc597503c77abf447edc63ed686: !CameraComponent
@@ -75,27 +141,20 @@ Hierarchy:
                         Name: null
                         Projection: Perspective
                         Slot: b2849db4-7394-4339-b5d8-81dea6d03799
-                    0d0658f4a7e46353990251f4fe4314fc: !MyGame.BasicCameraController,MyGame
-                        Id: d49d4063-630e-4b03-8056-9ff73832f58b
-                        Gamepad: false
-                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
-                        TouchMovementSpeed: {X: 0.7, Y: 0.7, Z: 0.3}
-                        SpeedFactor: 5.0
-                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
-                        MouseRotationSpeed: {X: 1.0, Y: 1.0}
-                        TouchRotationSpeed: {X: 1.0, Y: 0.7}
         -   Entity:
-                Id: d326b05b-83a6-46e5-af89-3d89cee7457b
-                Name: ball spawn
+                Id: 970d8c91-8005-4e1c-88e8-eb9df2dffd33
+                Name: Streamer
                 Components:
-                    537f5ea52dcc8151eb82fcd7f004b780: !TransformComponent
-                        Id: 8c54b936-7673-4007-9990-acb740614c54
+                    3fc000f98f91353e21e2e6a873dab19e: !TransformComponent
+                        Id: 31cbf049-9876-4d9b-9d41-c33b38f47eda
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    e188e515e70eacfead303ace64eb9dfc: !MyGame.Spawner,MyGame
-                        Id: 05e2276c-c5d2-4608-b962-106e1b118a65
+                    3cd197885d91405e01d52a5c2a690ddc: !MyGame.SceneStreaming1,MyGame
+                        Id: 2d889e71-79cc-4fab-9674-cf65bed3c747
+                        Url: SceneFront
+                        Trigger: !RigidbodyComponent ref!! 0330a48b-5e7f-4bb0-95fd-e8df2bc108c6
         -   Entity:
                 Id: ec1f0482-aad7-4b56-b2c1-f458c788d205
                 Name: Directional light

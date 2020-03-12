@@ -1,0 +1,10 @@
+!Texture
+Id: a5ab8df5-36f2-4b10-a299-90d9889b8bbe
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../RustProj/terrain/example_images/unscaledFinalPlanet.png
+IsCompressed: false
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+GenerateMipmaps: false
+IsStreamable: false

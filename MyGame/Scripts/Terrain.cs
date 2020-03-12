@@ -63,7 +63,7 @@ namespace MyGame.Scripts
                 {
                     //TODO : change the position to be centered
                     Vector3 pos = new Vector3(x / ((float)_vertexCount - 1) * TERRAIN_SIZE, vertices[vertexPointer].Position.Y, z / ((float)_vertexCount - 1) * TERRAIN_SIZE);
-                    pos -= new Vector3(_vertexCount/2,100,_vertexCount/2);
+                    pos -= new Vector3(_vertexCount/2,20,_vertexCount/2);
                     vertices[vertexPointer].Position = pos;
 
                     // We only need the position of the vertices for the collider so we'll just put it in a new array

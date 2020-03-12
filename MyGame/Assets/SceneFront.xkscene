@@ -1,0 +1,80 @@
+!SceneAsset
+Id: 4a55f2ac-bc10-4fbe-a412-061c0337c747
+SerializedVersion: {Xenko: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 8ff3ae5d-c2ff-4e39-9530-001a985ba64c
+        - ref!! bccd7f9f-8b68-4d9a-baba-697878567a6f
+        - ref!! cbd071db-f4e3-4d78-9013-a4eadc90416d
+    Parts:
+        -   Entity:
+                Id: 8d59d406-2278-4b4b-accc-4e4790110656
+                Name: ball
+                Components:
+                    3afe77d210115f2a8f20e8893575e43b: !TransformComponent
+                        Id: bf6e33ba-1e09-4462-95af-42bbd83686e7
+                        Position*: {X: 0.0, Y: 0.5, Z: -10.9659376}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    96b0ccef1f42d32e41a8453980b14141: !ModelComponent
+                        Id: 22ce1554-7fb7-49e7-83ec-c44be400a610
+                        Model: 2bec6f67-301f-4eb3-b43c-aec939f1d42a:Sphere
+                        Materials: {}
+            Base:
+                BasePartAsset: 0c3b2875-c8a4-4172-b373-9cdda6e9df91:ball
+                BasePartId: eaf6e005-3b8b-4dd8-90ff-1387c62c91e7
+                InstanceId: 8a6e0799-c9e8-4ddb-94c7-45f4cc1032d1
+        -   Entity:
+                Id: 8ff3ae5d-c2ff-4e39-9530-001a985ba64c
+                Name: Ground2
+                Components:
+                    65c7424097092249984f53ddfd389405: !TransformComponent
+                        Id: 58b63f58-47f4-42ae-aa00-553f5f760dcf
+                        Position: {X: 0.0, Y: 0.0, Z: -10.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    2c0127941b30063bf53d3c59f511084b: !ModelComponent
+                        Id: 949e9990-66dc-4c85-afa7-5af397b53fcd
+                        Model: d9894d0d-f0b0-4337-9b89-02f45a3e4bb6:Ground
+                        Materials: {}
+        -   Entity:
+                Id: bccd7f9f-8b68-4d9a-baba-697878567a6f
+                Name: Directional light
+                Components:
+                    8cdc1873f38d51f80304f3825d8f7e98: !TransformComponent
+                        Id: 3e0e9467-5849-4acf-956f-3f6c901a34f7
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.258819044, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    de39eb0994ea3d0885db289305730fe6: !LightComponent
+                        Id: c16944f2-dd38-4759-b8ee-3beeabb47ac6
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 0.0, B: 0.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Entity:
+                Id: cbd071db-f4e3-4d78-9013-a4eadc90416d
+                Name: ball
+                Components:
+                    6fe35e73052cc153b21b5215be28fb47: !TransformComponent
+                        Id: 66e50896-ac5e-4c28-84d1-f71256a82fb3
+                        Position: {X: 1.41133046, Y: 0.0, Z: 0.727636337}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            4eaa4fc8256fcc3e23d6a8becebafacb: ref!! bf6e33ba-1e09-4462-95af-42bbd83686e7
