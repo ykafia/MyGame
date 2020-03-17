@@ -1,0 +1,15 @@
+!Model
+Id: a2d0e07d-901c-470e-b2b8-7345027c3e79
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/Models/myCube.fbx
+Skeleton: ba47f0f9-b6a4-439a-9f22-8ba2bbfd7041:myCube Skeleton
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    9f064d399e21e79d518a26983211385b:
+        Name: Material
+        MaterialInstance:
+            Material: null
+Modifiers: {}
+~SourceHashes:
+    6f9964877f0effc89d8fbf4bec71cd96~../Resources/Models/myCube.fbx: d52c3afde1b836ab70d406efc8188bf6

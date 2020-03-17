@@ -16,3 +16,7 @@ Bundles: []
 TemplateFolders: []
 RootAssets:
     - 4a55f2ac-bc10-4fbe-a412-061c0337c747:SceneFront
+    - 5fdf03ce-daeb-4ff9-8399-d1db2c7739f2:myCube_Walk
+    - a2d0e07d-901c-470e-b2b8-7345027c3e79:myCube
+    - ba47f0f9-b6a4-439a-9f22-8ba2bbfd7041:myCube Skeleton
+    - c8fc9d6c-8d95-40af-ad86-175304756fed:myCubeMaterial

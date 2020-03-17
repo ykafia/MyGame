@@ -8,10 +8,13 @@ Hierarchy:
     RootParts:
         - ref!! ec1f0482-aad7-4b56-b2c1-f458c788d205
         - ref!! 671757ce-7a6c-49f5-87a4-91c470e33650
+        - ref!! 8f963332-fb4d-403d-8aaa-7eceb995e01b
         - ref!! 0a8e2a8c-bbcb-4c86-880a-def7a8dc7267
         - ref!! 33f7a7ad-d782-49e2-ae98-6e91893e0097
         - ref!! 970d8c91-8005-4e1c-88e8-eb9df2dffd33
         - ref!! 07f8f031-ccc4-4093-9510-d01bd1523a5e
+        - ref!! d8089221-1480-466a-9cec-c2587c0b4788
+        - ref!! 711262dc-f0ae-4361-afda-16d8100854e1
     Parts:
         -   Entity:
                 Id: 07f8f031-ccc4-4093-9510-d01bd1523a5e
@@ -55,16 +58,13 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.6, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            361b327ebe8850f42dce3335011a0db5: ref!! 82f82fe9-fc16-4533-8d20-bbf60610d334
+                        Children: {}
                     326aa08c2bf60e7b986d2d4c9c9bc5e8: !ModelComponent
                         Id: 39c0422c-8d32-4cb3-b57c-9a121f68bc46
                         Model: 2bec6f67-301f-4eb3-b43c-aec939f1d42a:Sphere
                         IsShadowCaster: false
                         Materials:
                             c150caacc9391bb78959503ade8ad1c4~0: 26228b27-f064-4a2e-a1c1-d56bf7f793f5:boomsource
-                    88de94c289c9c9a4595ec79e570b38d8: !MyGame.MoveBall,MyGame
-                        Id: b58e439e-e419-4be6-ad61-099e30efd90d
                     af6ef229125a0f5e9e30da6f17203752: !CharacterComponent
                         Id: 63d58297-ff36-4f2b-86fa-a8cbff2e5e26
                         CanSleep: false
@@ -127,13 +127,35 @@ Hierarchy:
                         Type: !LightSkybox
                             Skybox: 49bf642a-0285-4a24-85ab-10e8b2edc56a:Skybox
         -   Entity:
+                Id: 711262dc-f0ae-4361-afda-16d8100854e1
+                Name: cube
+                Components:
+                    12797c5dca47597370f38e6cfeddd8de: !TransformComponent
+                        Id: 93c2d605-e429-425b-a0af-830fc2ff7e72
+                        Position: {X: 0.0, Y: 0.0, Z: -13.9581614}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e5093bc27d26e6daab23c3f7f5152846: !ModelComponent
+                        Id: 107cab45-bc05-4bb2-bd17-59a338003fdd
+                        Model: a2d0e07d-901c-470e-b2b8-7345027c3e79:myCube
+                        Materials: {}
+                    c8398348f63a0c7922c8cf498943a3dc: !AnimationComponent
+                        Id: 3183dfa3-7773-46c0-9190-3dad952c63cb
+                        Animations:
+                            2ab9a5120db6eef4ff4de0cf5f15a9c1~Walk: 5fdf03ce-daeb-4ff9-8399-d1db2c7739f2:myCube_Walk
+                    4f1a538e6a9ae768ec84cb91bc2b91f9: !MyGame.AnimateBlock,MyGame
+                        Id: 1c552fdf-1561-4258-8d57-6ebfc0d508bb
+                    043ffed8462ec61b10c18ca684d5aceb: !MyGame.UpdateAfterAnim,MyGame
+                        Id: 6169318d-dfb2-4465-867f-6144d20c4f30
+        -   Entity:
                 Id: 8f963332-fb4d-403d-8aaa-7eceb995e01b
                 Name: Camera
                 Components:
                     e9c149e2b2f3d6ea7b7e41667db81d21: !TransformComponent
                         Id: 82f82fe9-fc16-4533-8d20-bbf60610d334
-                        Position: {X: 0.0, Y: 3.26294184, Z: 3.80499125}
-                        Rotation: {X: -0.258819044, Y: 0.0, Z: 0.0, W: 0.9659258}
+                        Position: {X: 21.758543, Y: 8.37943649, Z: -7.588722}
+                        Rotation: {X: -0.08050306, Y: 0.7155131, Z: 0.0922624543, W: 0.687784731}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     c1e09fc597503c77abf447edc63ed686: !CameraComponent
@@ -141,6 +163,15 @@ Hierarchy:
                         Name: null
                         Projection: Perspective
                         Slot: b2849db4-7394-4339-b5d8-81dea6d03799
+                    a522ba4fe6393b6af91e5dcfac1b8243: !MyGame.BasicCameraController,MyGame
+                        Id: e264601a-66ba-4ef8-9088-dc1d64b81a47
+                        Gamepad: false
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 0.7, Y: 0.7, Z: 0.3}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 1.0, Y: 1.0}
+                        TouchRotationSpeed: {X: 1.0, Y: 0.7}
         -   Entity:
                 Id: 970d8c91-8005-4e1c-88e8-eb9df2dffd33
                 Name: Streamer
@@ -155,6 +186,16 @@ Hierarchy:
                         Id: 2d889e71-79cc-4fab-9674-cf65bed3c747
                         Url: SceneFront
                         Trigger: !RigidbodyComponent ref!! 0330a48b-5e7f-4bb0-95fd-e8df2bc108c6
+        -   Entity:
+                Id: d8089221-1480-466a-9cec-c2587c0b4788
+                Name: MovingCamera
+                Components:
+                    ec27faa95fe2ea715d5e27e932904df4: !TransformComponent
+                        Id: 0e1dc13b-ee71-4da2-82e0-50f7bd7c0593
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
         -   Entity:
                 Id: ec1f0482-aad7-4b56-b2c1-f458c788d205
                 Name: Directional light

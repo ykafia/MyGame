@@ -1,0 +1,19 @@
+!Animation
+Id: 5fdf03ce-daeb-4ff9-8399-d1db2c7739f2
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/Models/myCube_Walk.fbx
+ClipDuration:
+    Enabled: false
+    StartAnimationTime: 0:00:00:00.0000000
+    EndAnimationTime: 0:00:30:00.0000000
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+RepeatMode: LoopInfinite
+Type: !StandardAnimationAssetType {}
+Skeleton: ba47f0f9-b6a4-439a-9f22-8ba2bbfd7041:myCube Skeleton
+RootMotion: true
+PreviewModel: a2d0e07d-901c-470e-b2b8-7345027c3e79:myCube
+AnimationTimeMinimum: 0:00:00:00.0000000
+AnimationTimeMaximum: 0:00:00:00.5420000
+~SourceHashes:
+    61133ecacd15554d72f47342a233a191~../Resources/Models/myCube_Walk.fbx: dac4850a215ba5286793e4bf433b38f1

@@ -1,0 +1,14 @@
+!Skeleton
+Id: ba47f0f9-b6a4-439a-9f22-8ba2bbfd7041
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/Models/myCube.fbx
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    4129daff83760e5a7fbfc807dfa42bb0: {Name: RootNode, Depth: 0}
+    d665392762adb76ce44bafe9465c033d: {Name: Armature, Depth: 1}
+    ba8c700307096cc89049ab431b97c3b1: {Name: Root, Depth: 2}
+    9e425b34cb1bd5dfe21434fa2552e448: {Name: Cube, Depth: 3}
+    2f95e6a2a3dc303b955ee7b0640531a6: {Name: Root_end, Depth: 3}
+~SourceHashes:
+    3dae3d0d23f4227a243d2617b3dc4f2f~../Resources/Models/myCube.fbx: d52c3afde1b836ab70d406efc8188bf6
